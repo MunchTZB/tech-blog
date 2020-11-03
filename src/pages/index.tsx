@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby';
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 export default () => {
   return (
     <Layout>
-      123
+      <div className="g-p5r home">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus quam maxime ducimus enim minus molestias, natus eius fugit culpa quae voluptatem odio illo quis? Molestias, praesentium commodi? Pariatur, provident molestias.
+      </div>
     </Layout>
   )
 }
