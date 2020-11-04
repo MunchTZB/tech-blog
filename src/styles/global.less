@@ -1,8 +1,20 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "DIN Alternate", sans-serif;
   font-size: 16px;
+  font-family: "DIN Alternate", sans-serif;
+}
+
+.sans-serif {
+  font-family: "DIN Alternate", sans-serif;
+}
+
+.serif {
+  font-family: serif;
+}
+
+.transition {
+  transition: all .2s ease-in-out;
 }
 
 a {
@@ -10,6 +22,39 @@ a {
   text-decoration: inherit;
 }
 
-.g-p5r {
-  padding: 5rem;
+.blogs {
+  box-sizing: border-box;
+  max-width: 800px;
+  margin: auto;
+  padding-top: 80px;
+
+  &__item {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+.left {
+  cursor: pointer;
+  .serif();
+  @link-hover: #55378d;
+  &__time {
+    margin-bottom: .5rem;
+  }
+  &__title {
+    .transition();
+    font-size: 1.2rem;
+  }
+  &__desc {
+    .transition();
+    margin-top: .5rem;
+  }
+  &:hover {
+    .left {
+      &__title,
+      &__desc {
+        color: @link-hover;
+      }
+    }
+  }
 }
