@@ -16,7 +16,7 @@ const blogs = [
 export default () => {
   const blogs = useStaticQuery(graphql`
     {
-      allFile(filter: {sourceInstanceName: {eq: "blogs"}}) {
+      allFile(filter: { sourceInstanceName: { eq: "blogs" } }) {
         edges {
           node {
             id
@@ -42,10 +42,10 @@ export default () => {
     <Layout>
       <ul className="blogs">
         {/* @ts-ignore */}
-        {blogs.allFile.edges?.map(({node}) => {
-          const frontmatter = node.childJavascriptFrontmatter.frontmatter;
-          if (frontmatter.error) return null;
-          if (frontmatter.hide) return null;
+        {blogs.allFile.edges?.map(({ node }) => {
+          const frontmatter = node.childJavascriptFrontmatter.frontmatter
+          if (frontmatter.error) return null
+          if (frontmatter.hide) return null
           return (
             <Link key={node.id} to={`/blogs/${node.name}`}>
               <li className="blogs__item">
@@ -54,7 +54,6 @@ export default () => {
                   <div className="left__title">{frontmatter.title}</div>
                   <div className="left__desc">{frontmatter.desc}</div>
                 </div>
-
               </li>
             </Link>
           )
