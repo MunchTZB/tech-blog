@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrickBreakCore } from './core'
+import { BrickBreakCore, IRect } from './core'
 
 interface Props {
   style?: React.CSSProperties
@@ -25,16 +25,21 @@ export class BrickBreak extends Component<Props> {
 
   rafCallback = () => {
     this.core.iterator()
-    // console.log(this.core.bullet)
     this.ctx.clearRect(0, 0, this.getWidth(), this.getHeight())
     this.ctx.fillStyle = '#000'
-    this.ctx.fillRect(
-      this.core.bullet.x,
-      this.core.bullet.y,
-      this.core.bullet.width,
-      this.core.bullet.height
-    )
+    this.core.bricks.map(this.drawRect)
+    this.drawRect(this.core.bullet)
+    this.drawRect(this.core.paddle)
     requestAnimationFrame(this.rafCallback)
+  }
+
+  drawRect = (rect: IRect) => {
+    this.ctx.fillRect(
+      rect.x,
+      rect.y,
+      rect.width,
+      rect.height
+    )
   }
 
   getHeight() {
