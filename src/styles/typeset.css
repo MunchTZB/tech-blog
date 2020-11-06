@@ -235,7 +235,6 @@
   border-left: .2em solid rgba(0,0,0,.2);
   border-left-color: var(--blockquote-color);
   margin-left: .2em;
-  opacity: .8;
   padding-left: .8em;
 }
 .typeset-wysiwyg blockquote {

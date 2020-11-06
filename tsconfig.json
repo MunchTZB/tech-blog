@@ -4,6 +4,7 @@
     "jsx": "react",
     "module": "ES6",
     "allowSyntheticDefaultImports": true,
+    "target": "ES5",
     "moduleResolution": "Node"
   }
 }

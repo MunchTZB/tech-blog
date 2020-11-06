@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import { BrickBreak } from '../../components/BrickBreak'
 
 export const frontmatter = {
   time: '2020年 11月 4日',
@@ -23,6 +24,7 @@ export default class Content extends React.Component {
           <p>打砖块是一个经典游戏，这是一篇系列文章，分为上下两章</p>
           <h3>test</h3>
           <p>
+            <BrickBreak style={{ float: 'right' }}></BrickBreak>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore
             assumenda iure itaque velit enim odit doloribus dolorem cumque
             corporis voluptas? Veritatis nihil, beatae facere animi cupiditate
